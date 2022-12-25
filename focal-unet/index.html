@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta property="og:image" content="https://raw.githubusercontent.com/saic-mdal/lama-project/main/docs/img/prew.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="640">
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Focal-UNet: UNet-like Focal Modulation for Medical Image Segmentation">
+
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'],
+          ['\\(', '\\)']
+        ]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+
+  </script>
+
+  <title>Focal-UNet: UNet-like Focal Modulation for Medical Image Segmentation</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+    type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/landing-page.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Masthead -->
+  <!-- <header class="masthead text-white text-center">
+    <div class="container">
+      <div class="overlay"></div>
+      <div class="row">
+        <div class="offset-md-1 col-md-10">
+          <video class="video video-header" loop="loop" autoplay muted>
+            <source src="vids/video_200.webm" type="video/webm" />
+            Your browser doesn't support .webm video
+          </video>
+        </div>
+        <div class="col-xl-9 mx-auto">
+          <br /><br />
+          <h1 class="mb-5"><span class="title">Focal-UNet: UNet-like Focal Modulation for Medical Image Segmentation</span></h1>
+          <h5 class="mb-5"><span class="title">arXiv 2022 paper</span></h5>
+        </div>
+      </div>
+    </div>
+  </header> -->
+
+
+  <!-- Testimonials -->
+  <section class="testimonials text-center">
+    <div class="col-xl-9 mx-auto">
+      <br /><br />
+      <h1 class="mb-5"><span>Focal-UNet: UNet-like Focal Modulation for Medical Image Segmentation
+    </span></h1>
+      <h5 class="mb-5"><span>arXiv 2022</span></h5>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <h5>
+              <a href="mailto:mohammadreza.naderi4ATgmailDOTcom" style="font-weight: normal; text-decoration : none; color : #000000;">
+                Mohammad Reza <br> Naderi<sup style="font-size: 12px;">1</sup>
+              </a>
+            </h5>
+            <p class="font-weight-light mb-0"></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <h5>
+              <a href="mailto:givkashiATgmailDOTcom" style="font-weight: normal; text-decoration : none; color : #000000;">
+                Mohammad Hossein <br> Givkashi<sup style="font-size: 12px;">1</sup>
+              </a>
+            </h5>
+            <p class="font-weight-light mb-0"></p>
+          </div>
+        </div>
+		<div class="col-md-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <h5>
+              <a href="mailto:fatemeh_piri@ec.iut.ac.ir" style="font-weight: normal; text-decoration : none; color : #000000;">
+			   Fatemeh Piri<sup style="font-size: 12px;">1</sup>
+              </a>
+            </h5>
+            <p class="font-weight-light mb-0"></p>
+          </div>
+        </div>
+	</div>
+      <div class="row">
+
+        <div class="col-md-6">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <h5>
+              <a href="mailto:nader.karimi@iut.ac.ir" style="font-weight: normal; text-decoration : none; color : #000000;">
+                Nader Karimi<sup style="font-size: 12px;">1</sup>
+              </a>
+            </h5>
+            <p class="font-weight-light mb-0"></p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <h5>
+              <a href="mailto:samavi@mcmaster.ca" style="font-weight: normal; text-decoration : none; color : #000000;">
+
+                Shadrokh Samavi<sup style="font-size: 12px;">1,2,3</sup>
+              </a>
+            </h5>
+            <p class="font-weight-light mb-0"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row padtop">
+        <div class="offset-md-2  col-md-3">
+          <sup style="font-size: 12px;">1</sup><a href="http://english.iut.ac.ir/">Isfahan University of Technology, Iran</a><br />
+        </div>
+        <div class="col-md-3">
+          <sup style="font-size: 12px;">2</sup><a href="https://www.mcmaster.ca/">McMaster University, Canada</a><br />
+        </div>
+        <div class="col-md-3">
+          <sup style="font-size: 12px;">3</sup><a href="https://www.seattleu.edu/">Seattle University, USA</a><br />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Icons Grid -->
+  <section class="features-icons text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <a href="https://arxiv.org/abs/2212.09263" style="text-decoration : none; color : #000000;">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="fa fa-file-text m-auto text-primary"></i>
+              </div>
+              <h3>Paper</h3>
+              <p class="mylead mb-0">Download pdf</p>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="col-md-3">
+          <a href="https://github.com/givkashi/Focal-Unet" style="text-decoration : none; color : #000000;">
+            <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+              <img loading="lazy"  height="110px" src="img/git.png" />
+              <br>
+              <h3>Code</h3>
+              <p class="mylead mb-0">Checkout the code<br></p>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="col-md-3">
+          <a href="./cite.txt" style="text-decoration : none; color : #000000;">
+            <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="fa fa-graduation-cap m-auto text-primary"></i>
+              </div>
+              <h3>BibTex</h3>
+              <p class="mylead mb-0">Cite the paper</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-3">
+          <a href="" style="text-decoration : none; color : #000000;">
+		  <br>
+            <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+              <img loading="lazy"  height="100px" src="./img/logo2.png" />
+              <br>
+              <h3>Summary</h3>
+              <p class="mylead mb-0">Will be add<br></p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Image Showcases -->
+  <section class="showcase px-2">
+
+    <div class="container">
+
+      <div class="row myrow">
+        <div class="row">
+         <!--  <div class="offset-md-0 col-md-12 text-white">
+            <img   class="img-fluid mb-3" src="figs/fig1.png" alt="" width="100%">
+          </div>
+                      <div class="lead mb-0">
+              <center> 
+              <b>Overview of the Focal-UNet architucture
+              <br>
+              <br>
+              <br>
+            </center>
+              <br>-->
+            
+          <div class="offset-md-0 col-md-12">
+            <h2 style="text-align: center; margin-top:40px;">Abstract</h2>
+            <div class="lead mb-0" align="justify">
+				Recently, many attempts have been made to construct a transformer base Ushaped architecture, and new methods have been proposed that outperformed
+				CNN-based rivals. However, serious problems such as blockiness and
+				cropped edges in predicted masks remain because of transformers’ patch
+				partitioning operations. In this work, we propose a new U-shaped architecture
+				for medical image segmentation with the help of the newly introduced focal
+				modulation mechanism. The proposed architecture has asymmetric depths for
+				the encoder and decoder. Due to the ability of the focal module to aggregate
+				local and global features, our model could simultaneously benefit the wide
+				receptive field of transformers and local viewing of CNNs. This helps the
+				proposed method balance the local and global feature usage to outperform
+				one of the most powerful transformer-based U-shaped models called SwinUNet. We achieved a 1.68% higher DICE score and a 0.89 better HD metric
+				on the Synapse dataset. Also, with extremely limited data, we had a 4.25%
+				higher DICE score on the NeoPolyp dataset.
+            </div>
+            <p></p>
+          </div>
+		  <br>
+		  <br>
+		  <br>
+          <div class="offset-md-0 col-md-12 text-white">
+            <img loading="lazy"  class="img-fluid mb-3" src="figs/fig1.png" alt="" width="100%">
+          </div>
+
+
+          <div class="offset-md-0 col-md-12 ">
+            <h2 style="text-align: center; margin-top:100px;">Our results</h2>
+          </div>
+          <div style="margin-top: 40px" class="offset-md-0 col-md-12 ">
+            <h3 style="margin-left: -2.5%">The segmentation results of Swin-UNet and Focal-UNet on Synapse dataset.</h3>
+            <p></p>
+          </div>
+		  <br>
+          <div class="">
+            <img loading="lazy"  class="img-fluid mb-3" src="./figs/fig2.png" alt="" width="100%">
+          </div>
+		  
+          <div style="margin-top: 40px" class="offset-md-0 col-md-12 ">
+            <h3 style="margin-left: -2.5%">The segmentation results of Swin-UNet and Focal-UNet on NeoPolyp dataset.</h3>
+            <p></p>
+          </div>
+		  <br>
+          <div class="">
+            <img loading="lazy"  class="img-fluid mb-3" src="./figs/fig3.PNG " alt="" width="100%">
+          </div>
+
+  </section>
+
+  <section class="showcase">
+
+    <div class="container">
+
+
+      <div class="row myrow" style="padding-bottom:140px">
+        <div class="offset-md-0 col-md-12 ">
+          <h2 style="margin-left: -2.5%">Citation</h2>
+          <p class="lead mb-0" align="justify">
+            <div style="font-weight:normal; font-size: 16pt; background-color:  #F0F0F0;">
+            <tt>
+            @article{suvorov2021resolution, <br>
+              <div style="margin-left: 5%;font-size: 16pt; font-weight:normal; ">
+              title={Focal-UNet: UNet-like Focal Modulation for Medical Image Segmentation}, <br>
+              author={Suvorov, Roman and Logacheva, Elizaveta and Mashikhin, Anton and Remizova, Anastasia and Ashukha, Arsenii and Silvestrov, Aleksei and Kong, Naejin and Goka, Harshith and Park, Kiwoong and Lempitsky, Victor}, <br>
+              journal={arXiv preprint arXiv:2109.07161}, <br>
+              year={2021} <br>
+            </div>
+            }</tt>
+          </div>
+          </p>
+        </div>
+      </div>
+ 
+    </div>
+
+  </section>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
