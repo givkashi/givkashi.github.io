@@ -1,0 +1,8 @@
+@article{givkashi2024supervised,
+  title={Supervised deep learning for content-aware image retargeting with fourier convolutions},
+  author={Givkashi, MohammadHossein and Naderi, MohammadReza and Karimi, Nader and Shirani, Shahram and Samavi, Shadrokh},
+  journal={Multimedia Tools and Applications},
+  pages={1--17},
+  year={2024},
+  publisher={Springer}
+}
