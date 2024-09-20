@@ -1,6 +1,8 @@
-@article{naderi2023sfi,
-  title={SFI-Swin: Symmetric Face Inpainting with Swin Transformer by Distinctly Learning Face Components Distributions},
-  author={Naderi, MohammadReza and Givkashi, MohammadHossein and Karimi, Nader and Shirani, Shahram and Samavi, Shadrokh},
-  journal={arXiv preprint arXiv:2301.03130},
-  year={2023}
+@article{givkashi2024sfi,
+  title={SFI-Swin: symmetric face inpainting with swin transformer by distinctly learning face components distributions},
+  author={Givkashi, MohammadHossein and Naderi, MohammadReza and Karimi, Nader and Shirani, Shahram and Samavi, Shadrokh},
+  journal={Multimedia Tools and Applications},
+  pages={1--15},
+  year={2024},
+  publisher={Springer}
 }
