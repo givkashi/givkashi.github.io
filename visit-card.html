@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad Givkashi - AI Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        
+        .name-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .glass-card {
+            background: rgba(15, 23, 42, 0.78);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)), 
+                             url('https://picsum.photos/id/1015/1920/1080');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .profile-img {
+            border: 5px solid white;
+            box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.6);
+        }
+
+        .social-link {
+            transition: all 0.2s ease;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-3px) scale(1.08);
+        }
+    </style>
+</head>
+<body class="min-h-screen hero-bg flex items-center justify-center p-4 text-white">
+    <div class="max-w-md w-full">
+        <!-- Main Card -->
+        <div class="glass-card rounded-3xl overflow-hidden shadow-2xl">
+            
+            <!-- Top accent -->
+            <div class="h-44 bg-gradient-to-br from-indigo-600 via-purple-600 to-cyan-500 relative">
+                <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:35px_35px]"></div>
+            </div>
+
+            <!-- Profile Content -->
+            <div class="px-8 -mt-20 relative">
+                <!-- Profile Picture -->
+                <div class="flex justify-center">
+                    <img src="./pic/me.jpg" 
+                         alt="Givkashi" 
+                         class="profile-img w-36 h-36 rounded-full object-cover">
+                </div>
+
+                <!-- Name & Title -->
+                <div class="text-center mt-6">
+                    <h1 class="name-font text-4xl font-semibold tracking-tighter">Mohammad Givkashi</h1>
+                    <p class="text-cyan-300 mt-1 text-lg font-medium">AI Engineer</p>
+                </div>
+
+                <!-- Bio -->
+                <div class="mt-6 text-center text-slate-200 text-[15.2px] leading-relaxed px-2">
+                    Building intelligent systems and pushing the boundaries of artificial intelligence. 
+                    Passionate about machine learning, computer vision, and creating technology that benefits humanity.
+                </div>
+
+                <!-- Social Networks - Prominent & Easy to Click -->
+                <div class="mt-10">
+                    <p class="text-xs uppercase tracking-widest text-slate-400 text-center mb-4">Connect with me</p>
+                    <div class="grid grid-cols-2 gap-3">
+                        
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/givkashi/" target="_blank"
+                           class="social-link flex items-center gap-4 bg-slate-800/70 hover:bg-blue-600/90 border border-slate-600 hover:border-blue-400 rounded-2xl p-4 group">
+                            <i class="fa-brands fa-linkedin text-3xl text-blue-400 group-hover:text-white"></i>
+                            <div>
+                                <div class="font-semibold">LinkedIn</div>
+                                <div class="text-xs text-slate-400">Professional Network</div>
+                            </div>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="https://instagram.com/givkashi" target="_blank"
+                           class="social-link flex items-center gap-4 bg-slate-800/70 hover:bg-pink-600/90 border border-slate-600 hover:border-pink-400 rounded-2xl p-4 group">
+                            <i class="fa-brands fa-instagram text-3xl text-pink-400 group-hover:text-white"></i>
+                            <div>
+                                <div class="font-semibold">Instagram</div>
+                                <div class="text-xs text-slate-400">Visual Journey</div>
+                            </div>
+                        </a>
+
+                        <!-- Telegram -->
+                        <a href="https://t.me/givkashi" target="_blank"
+                           class="social-link flex items-center gap-4 bg-slate-800/70 hover:bg-sky-600/90 border border-slate-600 hover:border-sky-400 rounded-2xl p-4 group">
+                            <i class="fa-brands fa-telegram text-3xl text-sky-400 group-hover:text-white"></i>
+                            <div>
+                                <div class="font-semibold">Telegram</div>
+                                <div class="text-xs text-slate-400">Fast Chat</div>
+                            </div>
+                        </a>
+
+                        <!-- WhatsApp -->
+                        <a href="https://api.whatsapp.com/send?phone=989306599819" target="_blank"
+                           class="social-link flex items-center gap-4 bg-slate-800/70 hover:bg-green-600/90 border border-slate-600 hover:border-green-400 rounded-2xl p-4 group">
+                            <i class="fa-brands fa-whatsapp text-3xl text-green-400 group-hover:text-white"></i>
+                            <div>
+                                <div class="font-semibold">WhatsApp</div>
+                                <div class="text-xs text-slate-400">Direct Message</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Contact Bar -->
+            <div class="mt-12 bg-white/10 border-t border-white/10 py-6 px-8">
+                <div class="flex justify-between items-center text-sm">
+                    <a href="tel:+37477996133" 
+                       class="flex items-center gap-2 hover:text-cyan-300 transition-colors">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+374 77 99 61 33</span>
+                    </a>
+                    
+                    <a href="mailto:givkashi@gmail.com" 
+                       class="flex items-center gap-2 hover:text-cyan-300 transition-colors">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>givkashi@gmail.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center text-xs text-slate-400 mt-8">
+            Digital Visit Card • Givkashi
+        </div>
+    </div>
+
+    <script>
+        console.log("%cGivkashi - AI Engineer Visit Card", "color:#67e8f9; font-family:monospace;");
+    </script>
+</body>
+</html>
